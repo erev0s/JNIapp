@@ -22,9 +22,10 @@ android {
         }
     }
 
-    sourceSets {
-        main {
-            jniLibs.srcDirs = ['libs'] 
+    externalNativeBuild {
+        cmake {
+            path "src/main/c/CMakeLists.txt"
+            version "3.10.2"
         }
     }
 
